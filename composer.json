@@ -1,0 +1,31 @@
+{
+    "name": "prolic/humus-mvc-assetmanager",
+    "description": "An assetmanager module for HumusMVC, based on RWOverdijk/AssetManager",
+    "type": "library",
+    "keywords": [
+        "asset",
+        "asset manager",
+        "zf2",
+        "zend framework 2",
+        "zf1",
+        "zend framework 1",
+        "humus",
+        "humus mvc"
+    ],
+    "homepage": "https://github.com/prolic/HumusMvcAssetManager",
+    "authors": [
+        {
+            "name": "Sascha-Oliver Prolic",
+            "email": "saschaprolic@googlemail.com",
+            "homepage": "http://www.sasaprolic.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "rwoverdijk/assetmanager": "1.*",
+        "prolic/humus-mvc": "dev-master"
+    },
+    "autoload": {
+        "classmap": [ "src/HumusMvcAssetManager" ]
+    }
+}
