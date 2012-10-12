@@ -11,7 +11,7 @@ In a nutshell, this module allows you to package assets with your module working
 
 ## Installation
 
- 1.  Require assetmanager:
+Require HumusMvcAssetManager via composer:
 
 ```sh
 ./composer.phar require prolic/humus-mvc-assetmanager
