@@ -10,6 +10,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
  *
  * @category   Humus
  * @package    HumusMvcAssetManager
+ * @subpackage  Service
  */
 class AssetManagerServiceFactory implements FactoryInterface
 {

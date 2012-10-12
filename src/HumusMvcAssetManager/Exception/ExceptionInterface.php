@@ -5,8 +5,8 @@ namespace HumusMvcAssetManager\Exception;
 /**
  * The interface to be implemented by exceptions in the AssetManager namespace
  *
- * @category   AssetManager
- * @package    AssetManager
+ * @category   Humus
+ * @package    HumusMvcAssetManager
  * @subpackage Exception
  */
 interface ExceptionInterface

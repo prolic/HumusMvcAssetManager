@@ -13,8 +13,8 @@ use HumusMvc\MvcEvent;
 /**
  * Module class
  *
- * @category   AssetManager
- * @package    AssetManager
+ * @category   Humus
+ * @package    HumusMvcAssetManager
  */
 class Module implements
     AutoloaderProviderInterface,

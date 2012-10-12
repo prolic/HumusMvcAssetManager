@@ -3,8 +3,8 @@
 namespace HumusMvcAssetManager\Exception;
 
 /**
- * @category   AssetManager
- * @package    AssetManager
+ * @category   Humus
+ * @package    HumusMvcAssetManager
  * @subpackage Exception
  */
 class RuntimeException extends \RuntimeException implements ExceptionInterface

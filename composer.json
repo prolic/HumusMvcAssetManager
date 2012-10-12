@@ -13,6 +13,7 @@
         "humus mvc"
     ],
     "homepage": "https://github.com/prolic/HumusMvcAssetManager",
+    "license": "MIT",
     "authors": [
         {
             "name": "Sascha-Oliver Prolic",
@@ -23,9 +24,9 @@
     "require": {
         "php": ">=5.3.3",
         "rwoverdijk/assetmanager": "1.*",
-        "prolic/humus-mvc": "dev-master"
+        "prolic/humus-mvc": "1.*"
     },
     "autoload": {
-        "classmap": [ "src/HumusMvcAssetManager" ]
+        "classmap": [ "src/" ]
     }
 }

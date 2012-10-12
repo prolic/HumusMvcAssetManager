@@ -2,8 +2,8 @@
 
 namespace HumusMvcAssetManager\Service;
 
-use AssetManager\Service\AssetManager as BaseAssetManager;
 use Assetic\Asset\AssetInterface;
+use AssetManager\Service\AssetManager as BaseAssetManager;
 use HumusMvcAssetManager\Exception;
 use Zend_Controller_Request_Abstract as Request;
 use Zend_Controller_Request_Http as HttpRequest;
@@ -12,6 +12,7 @@ use Zend_Controller_Response_Abstract as Response;
 /**
  * @category    Humus
  * @package     HumusMvcAssetManager
+ * @subpackage  Service
  */
 class AssetManager extends BaseAssetManager
 {
