@@ -3,7 +3,11 @@
 namespace HumusMvcAssetManager\Service;
 
 use Assetic\Asset\AssetInterface;
-use AssetManager\Service\AssetManager as BaseAssetManager;
+use AssetManager\Resolver\ResolverInterface;
+use AssetManager\Service\AssetCacheManager;
+use AssetManager\Service\AssetCacheManagerAwareInterface;
+use AssetManager\Service\AssetFilterManager;
+use AssetManager\Service\AssetFilterManagerAwareInterface;
 use HumusMvcAssetManager\Exception;
 use Zend_Controller_Request_Abstract as Request;
 use Zend_Controller_Request_Http as HttpRequest;
@@ -14,8 +18,53 @@ use Zend_Controller_Response_Abstract as Response;
  * @package     HumusMvcAssetManager
  * @subpackage  Service
  */
-class AssetManager extends BaseAssetManager
+class AssetManager implements
+    AssetFilterManagerAwareInterface,
+    AssetCacheManagerAwareInterface
 {
+    /**
+     * @var ResolverInterface
+     */
+    protected $resolver;
+
+    /**
+     * @var AssetFilterManager The AssetFilterManager service.
+     */
+    protected $filterManager;
+
+    /**
+     * @var AssetCacheManager The AssetCacheManager service.
+     */
+    protected $cacheManager;
+
+    /**
+     * @var AssetInterface The asset
+     */
+    protected $asset;
+
+    /**
+     * @var string The requested path
+     */
+    protected $path;
+
+    /**
+     * @var array The asset_manager configuration
+     */
+    protected $config;
+
+    /**
+     * Constructor
+     *
+     * @param ResolverInterface $resolver
+     * @param array             $config
+     *
+     * @return AssetManager
+     */
+    public function __construct($resolver, $config = array())
+    {
+        $this->setResolver($resolver);
+        $this->setConfig($config);
+    }
 
     /**
      * Set the asset on the response, including headers and content.
@@ -99,4 +148,76 @@ class AssetManager extends BaseAssetManager
 
         return (bool)$this->asset;
     }
+
+    /**
+     * Set the config
+     *
+     * @param array $config
+     */
+    protected function setConfig(array $config)
+    {
+        $this->config = $config;
+    }
+
+    /**
+     * Set the resolver to use in the asset manager
+     *
+     * @param ResolverInterface $resolver
+     */
+    public function setResolver(ResolverInterface $resolver)
+    {
+        $this->resolver = $resolver;
+    }
+
+    /**
+     * Get the resolver used by the asset manager
+     *
+     * @return ResolverInterface
+     */
+    public function getResolver()
+    {
+        return $this->resolver;
+    }
+
+    /**
+     * Set the AssetFilterManager.
+     *
+     * @param AssetFilterManager $filterManager
+     */
+    public function setAssetFilterManager(AssetFilterManager $filterManager)
+    {
+        $this->filterManager = $filterManager;
+    }
+
+    /**
+     * Get the AssetFilterManager
+     *
+     * @return AssetFilterManager
+     */
+    public function getAssetFilterManager()
+    {
+        return $this->filterManager;
+    }
+
+    /**
+     * Set the AssetCacheManager.
+     *
+     * @param AssetCacheManager $filterManager
+     */
+    public function setAssetCacheManager(AssetCacheManager $cacheManager)
+    {
+        $this->cacheManager = $cacheManager;
+    }
+
+    /**
+     * Get the AssetCacheManager
+     *
+     * @return AssetCacheManager
+     */
+    public function getAssetCacheManager()
+    {
+        return $this->cacheManager;
+    }
+
 }
+
