@@ -1,4 +1,10 @@
 # HumusMvcAssetManager
+
+[![Total Downloads](https://poser.pugx.org/prolic/humus-mvc-assetmanager/downloads.png)](https://packagist.org/packages/prolic/humus-mvc-assetmanager)
+[![Latest Stable Version](https://poser.pugx.org/prolic/humus-mvc-assetmanager/v/stable.png)](https://packagist.org/packages/prolic/humus-mvc-assetmanager)
+[![Latest Unstable Version](https://poser.pugx.org/prolic/humus-mvc-assetmanager/v/unstable.png)](https://packagist.org/packages/prolic/humus-mvc-assetmanager)
+[![Dependency Status](https://www.versioneye.com/package/php:prolic:humus-mvc-assetmanager/badge.png)](https://www.versioneye.com/package/php:prolic:humus-mvc-assetmanager)
+
 Based on [AssetManager](https://github.com/RWOverdijk/AssetManager) by [Wesley Overdijk](http://blog.spoonx.nl/) and [Marco Pivetta](http://ocramius.github.com/)
 
 ## Introduction
