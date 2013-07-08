@@ -18,13 +18,13 @@
 
 namespace HumusMvcAssetManager;
 
-use Zend\Loader\StandardAutoloader;
-use Zend\Loader\AutoloaderFactory;
+use HumusMvc\MvcEvent;
 use Zend\EventManager\EventInterface;
-use Zend\ModuleManager\Feature\ConfigProviderInterface;
+use Zend\Loader\AutoloaderFactory;
+use Zend\Loader\StandardAutoloader;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\Feature\BootstrapListenerInterface;
-use HumusMvc\MvcEvent;
+use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
 /**
  * Module class
